@@ -74,4 +74,5 @@ function findProductById(id) {
 function lineItemTotal(cartItem) {
   return cart.qty * priceAfterCategoryDiscount(product)
   if (product === null || cart.qty<= 0)
+    return 0
 }
