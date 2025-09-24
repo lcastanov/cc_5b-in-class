@@ -24,8 +24,6 @@ const customerType = "member";
 
 
 // Task 1
-
-
 function getCategoryDiscount(category) {
     switch (category) {
       case 'gear':
@@ -44,12 +42,32 @@ function getCategoryDiscount(category) {
         return 0
         break;
     }
+  }
+
+console.log(getCategoryDiscount('apparel'));
+
+
+// Task 2
+function priceAfterCategoryDiscount(product) {
+  return product.price * (1 - getCategoryDiscount(product.category))
 }
 
-let 
+console.log(priceAfterCategoryDiscount(products[0]));
 
 
-function name(params) {
-    products.price * (1 - rate);
-    return 
+
+// Task 3
+function findProductById(id) {
+  for (let product of products) {
+    if (product.id === id) {
+      return product
+    } else {
+      return null
+    }
+  }
 }
+  console.log(findProductById(201));
+
+
+
+// Task 4
